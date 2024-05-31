@@ -36,5 +36,5 @@ const Layout = () => {
         </div>
     );
 };
-
+// primero el registro(formulario) en la vista home, luego el login(fomulario), 
 export default injectContext(Layout);
