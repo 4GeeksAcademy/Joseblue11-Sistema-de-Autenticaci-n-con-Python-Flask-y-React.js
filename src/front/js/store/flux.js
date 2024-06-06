@@ -24,8 +24,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					console.log(error)
 				}
-			}
+			},
 			
+
+			login:async(email,password)=>{
+				try {
+					const response = await fetch("https://potential-potato-vx4qqwp5xxr3wwxj-3001.app.github.dev/api/login",{
+						method:"POST",
+						headers:{"Content-Type":"application/json"},
+						body:JSON.stringify({
+							email:email,
+							password:password,
+						})
+					})
+					const data = await response.json()
+					localStorage.setItem("token",data.access_token )
+					console.log(data)
+				} catch (error) {
+					console.log(error)
+				}
+			}
 			
 		}
 	};
