@@ -79,4 +79,4 @@ def protected():
     
     if user is None:
         return jsonify({"msg":"el usuario no existe"}),404
-    return jsonify(user=user.serialize())
+    return jsonify(user=user.serialize()),202

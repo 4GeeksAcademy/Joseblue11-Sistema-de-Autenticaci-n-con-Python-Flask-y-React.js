@@ -1,14 +1,14 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			
+			user:{}
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			
 			register:async(name,lastName,email,password)=>{
 				try {
-					const response = await fetch("https://potential-potato-vx4qqwp5xxr3wwxj-3001.app.github.dev/api/register",{
+					const response = await fetch("https://expert-carnival-6j644wv7vpgfr56r-3001.app.github.dev/api/register",{
 						method:"POST",
 						headers:{"Content-Type":"application/json"},
 						body:JSON.stringify({
@@ -29,7 +29,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			login:async(email,password)=>{
 				try {
-					const response = await fetch("https://potential-potato-vx4qqwp5xxr3wwxj-3001.app.github.dev/api/login",{
+					const response = await fetch("https://expert-carnival-6j644wv7vpgfr56r-3001.app.github.dev/api/login",{
 						method:"POST",
 						headers:{"Content-Type":"application/json"},
 						body:JSON.stringify({
@@ -40,6 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const data = await response.json()
 					localStorage.setItem("token",data.access_token )
 					console.log(data)
+					setStore({user:data.user})
 				} catch (error) {
 					console.log(error)
 				}

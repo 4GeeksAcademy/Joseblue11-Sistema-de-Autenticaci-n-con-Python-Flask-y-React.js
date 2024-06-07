@@ -12,6 +12,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Login from "./pages/login";
 import Profile from "./pages/profile";
+import Landing from "./pages/Landing";
 
 //create your first component
 const Layout = () => {
@@ -27,7 +28,8 @@ const Layout = () => {
                 <ScrollToTop>
                     <Navbar />
                     <Routes>
-                        <Route element={<Home />} path="/" />
+                        <Route element={<Landing />} path="/" />
+                        <Route element={<Home />} path="/register" />
                         <Route element={<Login />} path="/login" />
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Profile />} path="/profile" />
