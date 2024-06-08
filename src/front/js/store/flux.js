@@ -19,10 +19,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						})
 					})
 					const data = await response.json()
+					if(!response.ok){
+						throw new Error("Error al Registrarte")
+					} 
 					console.log(data)
-					
+					return true
 				} catch (error) {
-					console.log(error)
+					alert(error)
 				}
 			},
 			
@@ -38,11 +41,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 						})
 					})
 					const data = await response.json()
+					if(!response.ok){
+						throw new Error("Error al hacer Login")
+					} 
 					localStorage.setItem("token",data.access_token )
 					console.log(data)
 					setStore({user:data.user})
+					return true
 				} catch (error) {
-					console.log(error)
+					alert(error)
 				}
 			}
 			

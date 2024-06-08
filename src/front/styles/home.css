@@ -5,3 +5,54 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+  .Landing {
+    background-image: url(https://wallpapers-clan.com/wp-content/uploads/2023/11/landscape-mountains-clouds-desktop-wallpaper-preview.jpg); /* Replace with the actual image URL */
+    background-size: cover;
+    background-position: center;
+    height:auto;
+    width: 100%;
+  }
+  
+  .rigo1 {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 46, 99);
+    font-family: "Kalam", cursive;
+  }
+  
+  .rigo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+ 
+  .title1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 46, 99);
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+  
+  .text {
+    color: rgb(0, 46, 99);
+    font-family: "Kalam", cursive;
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+  .Text1 {
+    font-family: "Kalam", cursive;
+    color: rgb(0, 46, 99);
+  }
+  
+  .imagen {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+  
