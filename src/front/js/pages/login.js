@@ -23,11 +23,11 @@ const Login = () => {
   };
 
   return (
-    <div className="Login">
-      <div className="container">
-      <h1> iniciar Session </h1>
-
-        <div className="row">
+    <div className="Login p-4">
+      <div className="container p-5">
+      <h1> Iniciar Session </h1>
+      <div className="card"> 
+      <div className=" row p-1">
           <div className="col">
             <label htmlFor="exampleInputEmail1" className="form-label">
               Email
@@ -43,13 +43,13 @@ const Login = () => {
             <div
               id="emailHelp"
               className="form-text"
-              style={{ color: "white" }}
+              style={{ color: "black" }}
             >
               no compartiremos tu email con nadie mas
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row p-1">
           <div className="col">
             <label htmlFor="exampleInputPassword1" className="form-label">
               Password
@@ -70,6 +70,8 @@ const Login = () => {
           Iniciar
         </button>
       </div>
+      </div>
+      
     </div>
   );
 };

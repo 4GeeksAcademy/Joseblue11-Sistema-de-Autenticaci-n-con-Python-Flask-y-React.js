@@ -56,3 +56,20 @@
     border-radius: 50%;
   }
   
+.card{
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: rgba(91, 255, 228, 0.466);
+  margin-top: 40px;
+  color: rgb(0, 46, 99);
+}
+
+.card1{
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: rgba(252, 255, 91, 0.466);
+  margin-top: 40px;
+  color: rgb(0, 46, 99);
+}

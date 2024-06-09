@@ -5,7 +5,7 @@ import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/signup.css";
 
 export const Home = () => {
-  const { store, actions } = useContext(Context);
+  const { actions } = useContext(Context);
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,23 +14,22 @@ export const Home = () => {
 
   const registro = async (e) => {
     e.preventDefault();
-    if (name == "" && lastName=="" && email=="" && password=="" ) {
+    if (name == "" && lastName == "" && email == "" && password == "") {
       alert("Hay campos vacios ");
-    } 
-    else {
+    } else {
       const result = await actions.register(name, lastName, email, password);
-      if(result){
+      if (result) {
         navigate("/login");
       }
     }
   };
 
   return (
-    <div className="signup ">
+    <div className="signup p-4">
       <div className="container">
         <h1>Registro</h1>
         <form>
-          <div className="row">
+          <div className="card row">
             <div className="col">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 nombre:
@@ -57,9 +56,6 @@ export const Home = () => {
                 aria-describedby="emailHelp"
               />
             </div>
-          </div>
-
-          <div className="row">
             <div className="col">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Email
@@ -72,7 +68,11 @@ export const Home = () => {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
-              <div id="emailHelp" className="form-text">
+              <div
+                id="emailHelp"
+                className="form-text"
+                style={{ color: "black" }}
+              >
                 no compartiremos tu email con nadie mas
               </div>
             </div>
@@ -90,7 +90,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="d-flex justify-content-center">
-          <button
+            <button
               onClick={(e) => registro(e)}
               className="btn btn-outline-success"
             >
