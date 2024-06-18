@@ -8,7 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 			register:async(name,lastName,email,password)=>{
 				try {
-					const response = await fetch("https://expert-carnival-6j644wv7vpgfr56r-3001.app.github.dev/api/register",{
+					const response = await fetch( process.env.BACKEND_URL + "api/register",{
 						method:"POST",
 						headers:{"Content-Type":"application/json"},
 						body:JSON.stringify({
@@ -29,10 +29,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			
-
 			login:async(email,password)=>{
 				try {
-					const response = await fetch("https://expert-carnival-6j644wv7vpgfr56r-3001.app.github.dev/api/login",{
+					const response = await fetch( process.env.BACKEND_URL + "api/login",{
 						method:"POST",
 						headers:{"Content-Type":"application/json"},
 						body:JSON.stringify({
